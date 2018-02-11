@@ -10,31 +10,39 @@
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
 </head>
 <body>
-	
+	<!-- Login Modal -->
+	<div id="login" class="modal">
+		<form id="customerForm" class="modal-content" action="" method="post">
+  		<label for="burgerCustomer">Returning customer? Let us know who you are:</label>
+			<input placeholder="Your Name Here" id="burgerCustomer" type="text" class="validate">
+			<div class="card-action">
+				<button class="btn waves-effect waves-light" type="submit" id="burgerSubmit" name="action">
+					Log In<i class="material-icons right">chevron_right</i>
+				</button>
+			</div>
+		</form>
+	</div>
+
+
 	<!-- Main Nav -->
 	<nav class="white" role="navigation">
-		<div class="nav-wrapper container">
-			<a class="burger-logo brand-logo blue-grey-text text-darken-4" href="">Burger Bistro</a>
-			<!-- <ul class="right hide-on-med-and-down">
-				<li><a href="#">Link</a></li>
-			</ul>
-			<ul id="nav-mobile" class="side-nav">
-				<li><a href="#">Link</a></li>
-			</ul>
-			<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
+		<div class="nav-wrapper">
+			<a class="burger-logo brand-logo center blue-grey-text text-darken-4" href="">Burger Bistro</a>
+				<ul id="nav-mobile" class="right">
+					<li><a class="btn modal-trigger waves-light waves-effect" href="#login">Login</a></li>
+				</ul>
 		</div>
 	</nav>
 
 	<!-- Main Header -->
 	<div id="index-banner" class="parallax-container">
-		<div class="section no-pad-bot">
+		<div class="section">
 			<div class="container">
 				<br><br>
 				<h1 class="header center red-text text-darken-4">Welcome to the Burger Bistro</h1>
 				<div class="row center">
 					<p class="header col s12 light grey-text text-lighten-5">Eat all the burgers you want!</p>
 				</div>
-				<br><br>
 			</div><!--/.container-->
 		</div><!--/.section-->
 		<div class="parallax"><img src="assets/img/burger.jpg" alt="Holy crap look at that burger! Are you hungry yet?"></div>
@@ -44,6 +52,9 @@
 	<div class="container">
 		<div class="section">
 			<div class="row">
+				<div class="center col s12 red-text text-lighten-2">Welcome, <span id="customerName">Customer</span>!</div>
+			</div>
+			<div class="row">
 				<div class="col s12 m4">
 					<div class="icon-block">
 						<h2 class="center brown-text"><i class="material-icons burger-icon">assignment_returned</i></h2>
@@ -51,9 +62,21 @@
 						<p class="light">Hot and fresh off the grill. Devour your burger before it's too late!</p>
 					</div>
 					<ul id="ordersFresh" class="collection">
-						<li class="collection-item dismissable"><div>Burgerordername<a href="#!" class="secondary-content"><i class="material-icons">local_dining</i></a></div></li>
-						<li class="collection-item dismissable"><div>Burgerordername<a href="#!" class="secondary-content"><i class="material-icons">local_dining</i></a></div></li>
-						<li class="collection-item dismissable"><div>Burgerordername<a href="#!" class="secondary-content"><i class="material-icons">local_dining</i></a></div></li>
+						<li class="collection-item dismissable"><div>
+							<a href="#!" class="secondary-content"><i class="material-icons">local_dining</i></a>
+							<span class="title">CustomerName</span>
+							<h6>BurgerName</h6>
+						</div></li>
+						<li class="collection-item dismissable"><div>
+							<a href="#!" class="secondary-content"><i class="material-icons">local_dining</i></a>
+							<span class="title">CustomerName</span>
+							<h6>BurgerName</h6>
+						</div></li>
+						<li class="collection-item dismissable"><div>
+							<a href="#!" class="secondary-content"><i class="material-icons">local_dining</i></a>
+							<span class="title">CustomerName</span>
+							<h6>BurgerName</h6>
+						</div></li>
 					</ul>
 				</div>
 				<div class="col s12 m4">
@@ -77,9 +100,21 @@
 						<p class="light">These are orders that have been eaten. Thanks for choosing Burger Bistro!</p>
 					</div>
 					<ul id="ordersDevoured" class="collection">
-						<li class="collection-item">Burgerordername</li>
-						<li class="collection-item">Burgerordername</li>
-						<li class="collection-item">Burgerordername</li>
+						<li class="collection-item"><div>
+							<span class="title">CustomerName</span>
+							<h6>BurgerName</h6>
+							<p class="nomargin">Eaten by: CustomerName2</p>
+						</div></li>
+						<li class="collection-item"><div>
+							<span class="title">CustomerName</span>
+							<h6>BurgerName</h6>
+							<p class="nomargin">Eaten by: CustomerName2</p>
+						</div></li>
+						<li class="collection-item"><div>
+							<span class="title">CustomerName</span>
+							<h6>BurgerName</h6>
+							<p class="nomargin">Eaten by: CustomerName2</p>
+						</div></li>
 					</ul>
 				</div>
 			</div>

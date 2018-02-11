@@ -1,1 +1,5 @@
-<li class="collection-item dismissable"><div>{{this.id}}. {{ burger_name }}<a href="#!" class="secondary-content devour" data-id="{{ this.id }}"><i class="material-icons">local_dining</i></a></div></li>
+<li class="collection-item dismissable"><div>
+	<a href="#!" class="secondary-content devour" data-id="{{ this.id }}"><i class="material-icons">local_dining</i></a>
+	<span class="title">{{ this.Customer.name }}'s</span>
+	<h6><!--{{this.id}}-->{{ burger_name }}</h6>
+</div></li>

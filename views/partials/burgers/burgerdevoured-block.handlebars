@@ -1,1 +1,7 @@
-<li class="collection-item">{{this.id}}. {{ burger_name }}</li>
+<!--<li class="collection-item">{{this.id}}. {{ burger_name }}</li>-->
+
+<li class="collection-item"><div>
+	<span class="title">{{ this.Customer.name }}'s</span>
+	<h6>{{ burger_name }}</h6>
+	<p class="nomargin">Eaten by: {{ this.Eater.name }}</p>
+</div></li>

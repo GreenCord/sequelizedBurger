@@ -10,11 +10,19 @@ var db = require('../models');
 // Routes
 module.exports = function(app){
 	app.get('/', (req,res)=>{
-		db.Burger.findAll({}).then(dbBurger=>{
+		db.Burger.findAll({
+			include: [
+				{ model: db.Customer, as: 'Customer'},
+				{ model: db.Customer, as: 'Eater'}
+			]
+		}).then(dbBurger=>{
 			var hbsObject = {
 				burgers: dbBurger
 			};
-			console.log(hbsObject);
+			for (var i = 0; i < hbsObject.burgers.length; i++) {
+				console.log('hbsObject' + i + '\n',hbsObject.burgers[i].dataValues);	
+			}
+			
 			res.render('index',hbsObject)
 		});
 	});
@@ -22,14 +30,16 @@ module.exports = function(app){
 	app.post('/order/new', (req,res)=>{
 		console.log('post received');
 		db.Burger.create({
-			burger_name: req.body.burgerOrder
+			burger_name: req.body.burgerOrder,
+			CustomerId: req.body.custId
 		}).then(dbBurger=>res.json(dbBurger));
 	});
 
-	app.put('/order/devour/:id', (req,res)=>{
+	app.put('/order/devour/:id/:eaterid', (req,res)=>{
 		console.log('put received');
 		db.Burger.update({
-			devoured: true
+			devoured: true,
+			EaterId: req.params.eaterid
 		},{
 			where: {
 				id: req.params.id

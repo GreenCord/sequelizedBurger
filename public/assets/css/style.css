@@ -28,6 +28,10 @@
 		font-size: 72px;
 	}
 
+	.nomargin {
+		margin: 0;
+	}
+
 	form input[type="text"], form input[type="email"], form textarea, form input[type="submit"], button {
 		color: inherit;
 		font-family: Lato, Corbel, 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -43,7 +47,7 @@
 		margin: 0 0 3rem;
 	}
 
-	p, dl, dd, ul, ol, li {
+	p, dl, dd {
 		font-size: 1rem;
 		line-height: 1.5;
 		margin-bottom: 1.5rem;

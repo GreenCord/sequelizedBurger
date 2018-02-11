@@ -25,6 +25,7 @@ app.set('view engine', 'handlebars');
 // var routes = require('./controllers/burgers_controller.js');
 // app.use(routes);
 require('./controllers/burgers_controller.js')(app);
+require('./controllers/customers_controller.js')(app);
 
 // app.listen(PORT, ()=>console.log('Ready to take burger orders on localhost:' + PORT));
 db.sequelize.sync().then(function(){
