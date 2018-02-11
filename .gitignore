@@ -59,3 +59,4 @@ typings/
 
 # sequelize config
 config.json
+.env
