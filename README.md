@@ -1,6 +1,6 @@
 # GreenCord's Burger Bistro
 
-You know you want a tasty burger. Head over to [the Bistro](https://powerful-stream-42528.herokuapp.com/) and order one up!
+You know you want a tasty burger. Head over to [the Bistro](https://safe-bayou-75201.herokuapp.com/) and order one up!
 
 Once you enter the Bistro, you can devour burgers, order one up, or see the tasty burger orders that have already been devoured.
 
